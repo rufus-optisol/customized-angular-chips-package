@@ -1,0 +1,66 @@
+<ng-container>
+  <div class="simple_chips_container">
+    <mat-label>{{ label }}</mat-label>
+    <div class="simple-chips">
+      <ng-container *ngIf="selectedItems && selectedItems.length > 0">
+        <ng-container *ngFor="let item of items">
+          <span *ngFor="let value of selectedItems">
+            <ng-container *ngIf="item.id == value">
+              <div class="chip">
+                {{ item?.name }}
+                <span class="close" (click)="removeItem(item.id)"
+                  >&#x2718;</span
+                >
+              </div>
+            </ng-container>
+          </span>
+        </ng-container>
+      </ng-container>
+      <div class="chip_select">
+        <div class="input-group-append">
+          <span class="input-group-text"> + </span>
+        </div>
+        <div class="w-100 position_absolute">
+          <mat-form-field class="w-100">
+            <mat-label>{{ label }}</mat-label>
+            <mat-select
+              #mys
+              multiple
+              panelClass="prevent-enter-close"
+              disableOptionCentering="true"
+              [value]="selectedItems"
+            >
+              <div
+                class="d-flex"
+                style="padding: 0 10px; align-items: center; position: relative"
+              >
+                <mat-form-field appearance="fill" class="w-100">
+                  <input
+                    matInput
+                    placeholder="Search"
+                    (input)="filterItems($event)"
+                  />
+                </mat-form-field>
+                <mat-label style="position: absolute; cursor: pointer">
+                  <span>&#xFE0E;</span>
+                </mat-label>
+              </div>
+              <div class="scroll_container">
+                <mat-option
+                  class="noteIcons"
+                  *ngFor="let item of filteredItems"
+                  [value]="item?.id"
+                  (click)="toggleItemSelection(item?.id)"
+                >
+                  <div class="option_name">
+                    {{ item?.name }}
+                  </div>
+                </mat-option>
+              </div>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

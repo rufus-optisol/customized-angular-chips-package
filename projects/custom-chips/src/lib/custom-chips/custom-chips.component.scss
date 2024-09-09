@@ -1,0 +1,89 @@
+
+.action_btns {
+    display: flex;
+    justify-content: space-between;
+}
+.w-100 {
+  width: 100%;
+}
+.small_text {
+  line-height: 10px;
+  display: flex;
+  width: 100%;
+}
+.scroll_container {
+  height: 180px;
+  overflow-y: auto;
+}
+.action_btn {
+    min-width: 40px;
+    button {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.name {
+  line-height: 25px;
+}
+.simple-chips {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 5px 5px 1px;
+    border: 1px solid #000;
+    background: rgba(242, 242, 242, 1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    .chip {
+      background: #000;
+      color: #fff;
+      padding: 5px;
+      border-radius: 6px;
+      margin-bottom: 2px;
+      margin-left: 4px;
+      position: relative;
+      padding-right: 35px;
+      .close {
+        cursor: pointer;
+        background: brown;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+        color: #000;
+        position: absolute; 
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .chip_select {
+    width: 33px;
+    height: 33px;
+    position: relative;
+  }
+
+  .position_absolute {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .simple_chips_container {
+    position: relative;
+    margin-top: 20px;
+  }
