@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CustomChipsComponent } from '@optisol/custom-chips';
+import { CustomChipsComponent } from '../../projects/custom-chips/src/lib/custom-chips/custom-chips.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
